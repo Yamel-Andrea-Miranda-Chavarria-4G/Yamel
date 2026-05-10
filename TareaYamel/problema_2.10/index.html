@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.10 - Pago de Agua CONAGUA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="card">
+        <a href="../index.html" class="btn-volver">🏠 Inicio</a>
+        <h1>💧 Pago de Agua - CONAGUA</h1>
+        <p class="description">Calcula el pago por consumo de agua en metros cúbicos</p>
+        
+        <div class="form-group">
+            <label for="metrosCubicos">Metros cúbicos consumidos:</label>
+            <input type="number" id="metrosCubicos" placeholder="Ej: 25" step="0.1">
+        </div>
+        
+        <div class="tarifa-info">
+            <strong>Tarifas:</strong><br>
+            • 0-10 m³: $10.00 por m³<br>
+            • 11-20 m³: $15.00 por m³<br>
+            • 21-40 m³: $20.00 por m³<br>
+            • Más de 40 m³: $30.00 por m³
+        </div>
+        
+        <button onclick="calcular()">Calcular Pago</button>
+        
+        <div id="resultado" class="resultado"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

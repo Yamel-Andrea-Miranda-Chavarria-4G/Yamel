@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.11 - Pago Luz Eléctrica</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="card">
+        <a href="../index.html" class="btn-volver">🏠 Inicio</a>
+        <h1>💡 Compañía Luz y Sombras</h1>
+        <p class="description">Calcula el pago por consumo de energía eléctrica (KW)</p>
+        
+        <div class="form-group">
+            <label for="kilowatts">Kilowatts consumidos (KW):</label>
+            <input type="number" id="kilowatts" placeholder="Ej: 150" step="0.1">
+        </div>
+        
+        <div class="tarifa-info">
+            <strong>Tarifas:</strong><br>
+            • 0-100 KW: $0.80 por KW<br>
+            • 101-200 KW: $1.20 por KW<br>
+            • 201-500 KW: $1.80 por KW<br>
+            • Más de 500 KW: $2.50 por KW
+        </div>
+        
+        <button onclick="calcular()">Calcular Pago</button>
+        
+        <div id="resultado" class="resultado"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

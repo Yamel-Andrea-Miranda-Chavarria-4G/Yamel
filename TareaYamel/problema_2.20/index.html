@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.20 - Hotel Cama Arena</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="card">
+        <a href="../index.html" class="btn-volver">🏠 Inicio</a>
+        <h1>🏨 Hotel Cama Arena</h1>
+        <p class="description">Calcula el cobro por estancia en el hotel</p>
+        
+        <div class="form-group">
+            <label for="noches">Número de noches:</label>
+            <input type="number" id="noches" placeholder="Ej: 3" min="1">
+        </div>
+        
+        <div class="form-group">
+            <label for="tipoHabitacion">Tipo de habitación:</label>
+            <select id="tipoHabitacion">
+                <option value="sencilla">Sencilla - $500/noche</option>
+                <option value="doble">Doble - $800/noche</option>
+                <option value="suite">Suite - $1500/noche</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="serviciosAdicionales">Servicios adicionales por noche ($):</label>
+            <input type="number" id="serviciosAdicionales" placeholder="Ej: 100" step="0.01" value="0">
+        </div>
+        
+        <button onclick="calcular()">Calcular Cobro</button>
+        
+        <div id="resultado" class="resultado"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

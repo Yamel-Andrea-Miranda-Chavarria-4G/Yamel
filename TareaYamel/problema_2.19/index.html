@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.19 - Costo Llamada con Diagrama</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="card">
+        <a href="../index.html" class="btn-volver">🏠 Inicio</a>
+        <h1>📱 Costo de Llamada</h1>
+        <p class="description">Con diagrama de flujo y pseudocódigo</p>
+        
+        <div class="form-group">
+            <label for="minutos">Duración (minutos):</label>
+            <input type="number" id="minutos" placeholder="Ej: 15" step="0.1">
+        </div>
+        
+        <div class="form-group">
+            <label for="costoMinuto">Costo por minuto ($):</label>
+            <input type="number" id="costoMinuto" placeholder="Ej: 2.50" step="0.01" value="2.50">
+        </div>
+        
+        <button onclick="calcular()">Calcular Costo</button>
+        
+        <div id="resultado" class="resultado"></div>
+        
+        <div class="diagrama-section">
+            <h2>📊 Diagrama de Flujo</h2>
+            <div class="diagrama">
+                <div class="nodo inicio">INICIO</div>
+                <div class="flecha">↓</div>
+                <div class="nodo entrada">Leer: minutos, costoMinuto</div>
+                <div class="flecha">↓</div>
+                <div class="nodo proceso">costoTotal = minutos × costoMinuto</div>
+                <div class="flecha">↓</div>
+                <div class="nodo salida">Mostrar: costoTotal</div>
+                <div class="flecha">↓</div>
+                <div class="nodo fin">FIN</div>
+            </div>
+        </div>
+        
+        <div class="pseudocodigo-section">
+            <h2>📝 Pseudocódigo</h2>
+            <pre class="pseudocodigo">
+ALGORITMO CostoLlamada
+    INICIO
+        LEER minutos
+        LEER costoMinuto
+        costoTotal ← minutos * costoMinuto
+        ESCRIBIR "El costo total es: ", costoTotal
+    FIN
+            </pre>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
